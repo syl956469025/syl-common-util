@@ -17,6 +17,9 @@ public class StringUtils {
      * @return
      */
     public static boolean isEmpty(String...str){
+        if (str== null || "".equals(str)){
+            return true;
+        }
         for (String s : str) {
             if (s==null || "".equals(s.trim())) {
                 return true;
@@ -31,6 +34,9 @@ public class StringUtils {
      * @return
      */
     public static boolean isNull(Object...obj){
+        if (obj == null || "".equals(obj)){
+            return true;
+        }
         for (Object o : obj) {
             if (o==null) {
                 return true;
